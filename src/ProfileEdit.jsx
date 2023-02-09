@@ -4,7 +4,7 @@ class ProfileEdit extends Component {
   render() {
     return (
       <section data-testid="page-profile-edit">
-        <p>Profile Edit</p>
+        {console.log('Profile Edit')}
       </section>
     );
   }

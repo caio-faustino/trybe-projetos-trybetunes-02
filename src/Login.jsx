@@ -4,7 +4,7 @@ class Login extends Component {
   render() {
     return (
       <section data-testid="page-login">
-        <p>Login</p>
+        {console.log('Login')}
       </section>
     );
   }

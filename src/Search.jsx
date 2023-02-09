@@ -4,7 +4,7 @@ class Search extends Component {
   render() {
     return (
       <section data-testid="page-search">
-        <p>Search</p>
+        {console.log('Search')}
       </section>
     );
   }
