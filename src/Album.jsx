@@ -6,7 +6,7 @@ class Album extends Component {
     return (
       <section data-testid="page-album">
         {console.log('Album')}
-        <Header/>
+        <Header />
       </section>
     );
   }

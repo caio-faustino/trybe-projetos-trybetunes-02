@@ -1,43 +1,42 @@
 import React, { Component } from 'react';
-import { getUser } from './services/userAPI';
 import { Link } from 'react-router-dom';
+import { getUser } from './services/userAPI';
 
 class Header extends Component {
-    constructor() {
-      super();
-      this.state = {
-        getUserr: '',
-        loading: false,
-        
-      };
-      this.handleRequest = this.handleRequest.bind(this);
-    }
-  
-    async handleRequest() {
-      this.setState(
-        {
-          loading: true,
-        },
-        async () => {
-          const gotUser = await getUser();
-          this.setState({
-            getUserr: gotUser,
-            loading: false,
-          });
-        },
-      );
-    }
+  constructor() {
+    super();
+    this.state = {
+      getUserr: '',
+      loading: false,
+    };
+    this.handleRequest = this.handleRequest.bind(this);
+  }
 
-    componentDidMount() {
-        this.handleRequest();
-      }
-  
-    render() {
-      const { loading, getUserr } = this.state;
-      return (
-        <header
-          data-testid="header-component"
-        >
+  componentDidMount() {
+    this.handleRequest();
+  }
+
+  async handleRequest() {
+    this.setState(
+      {
+        loading: true,
+      },
+      async () => {
+        const gotUser = await getUser();
+        this.setState({
+          getUserr: gotUser,
+          loading: false,
+        });
+      },
+    );
+  }
+
+  render() {
+    const { loading, getUserr } = this.state;
+    return (
+      <header
+        data-testid="header-component"
+      >
         <section>
           <h2
             data-testid="header-user-name"
@@ -64,12 +63,10 @@ class Header extends Component {
           >
             Favoriotes
           </Link>
-        
         </section>
-        </header>
-      );
-    }
+      </header>
+    );
   }
-  
-  export default Header;
-  
+}
+
+export default Header;

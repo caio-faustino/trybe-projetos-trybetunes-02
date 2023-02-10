@@ -6,7 +6,7 @@ class Search extends Component {
     return (
       <section data-testid="page-search">
         {console.log('Search')}
-        <Header/>
+        <Header />
       </section>
     );
   }

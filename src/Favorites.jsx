@@ -6,7 +6,7 @@ class Favorites extends Component {
     return (
       <section data-testid="page-favorites">
         {console.log('Favorites')}
-        <Header/>
+        <Header />
       </section>
     );
   }

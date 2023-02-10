@@ -6,7 +6,7 @@ class ProfileEdit extends Component {
     return (
       <section data-testid="page-profile-edit">
         {console.log('Profile Edit')}
-        <Header/>
+        <Header />
       </section>
     );
   }
